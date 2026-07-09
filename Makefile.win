@@ -1,0 +1,55 @@
+# Project: 项目1
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o Grade.o Input.o Add.o Delete.o Modify.o "Save\ Read.o" Failed.o "Show\ Search.o" "Menu\ Login.o"
+LINKOBJ  = main.o Grade.o Input.o Add.o Delete.o Modify.o "Save Read.o" Failed.o "Show Search.o" "Menu Login.o"
+LIBS     = -L"D:/Dev-c++/Dev-Cpp/MinGW64/lib" -L"D:/Dev-c++/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"D:/Dev-c++/Dev-Cpp/MinGW64/include" -I"D:/Dev-c++/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Dev-c++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/Dev-c++/Dev-Cpp/MinGW64/include" -I"D:/Dev-c++/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Dev-c++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/Dev-c++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = 项目1.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.c
+	$(CPP) -c main.c -o main.o $(CXXFLAGS)
+
+Grade.o: Grade.c
+	$(CPP) -c Grade.c -o Grade.o $(CXXFLAGS)
+
+Input.o: Input.c
+	$(CPP) -c Input.c -o Input.o $(CXXFLAGS)
+
+Add.o: Add.c
+	$(CPP) -c Add.c -o Add.o $(CXXFLAGS)
+
+Delete.o: Delete.c
+	$(CPP) -c Delete.c -o Delete.o $(CXXFLAGS)
+
+Modify.o: Modify.c
+	$(CPP) -c Modify.c -o Modify.o $(CXXFLAGS)
+
+"Save\ Read.o": Save\ Read.c
+	$(CPP) -c "Save Read.c" -o "Save Read.o" $(CXXFLAGS)
+
+Failed.o: Failed.c
+	$(CPP) -c Failed.c -o Failed.o $(CXXFLAGS)
+
+"Show\ Search.o": Show\ Search.c
+	$(CPP) -c "Show Search.c" -o "Show Search.o" $(CXXFLAGS)
+
+"Menu\ Login.o": Menu\ Login.c
+	$(CPP) -c "Menu Login.c" -o "Menu Login.o" $(CXXFLAGS)

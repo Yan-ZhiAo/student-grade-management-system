@@ -1,0 +1,15 @@
+# Build artifacts
+*.o
+*.obj
+*.exe
+
+# Runtime data
+Student.sys
+
+# IDE local state
+*.layout
+*.log
+
+# OS metadata
+Thumbs.db
+.DS_Store

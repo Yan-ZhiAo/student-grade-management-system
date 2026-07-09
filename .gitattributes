@@ -1,0 +1,6 @@
+*.c text working-tree-encoding=GBK
+*.h text working-tree-encoding=GBK
+*.txt text working-tree-encoding=GBK
+*.md text eol=lf
+*.dev text
+*.win text
