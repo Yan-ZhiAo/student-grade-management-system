@@ -6,6 +6,17 @@
 # Runtime data
 Student.sys
 
+# Non-code deliverables
+*.doc
+*.docx
+*.pdf
+*.ppt
+*.pptx
+*报告*
+*论文*
+*开题*
+*答辩*
+
 # IDE local state
 *.layout
 *.log
